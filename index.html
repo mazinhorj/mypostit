@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="MazinhoBigDaddy">
+  <title>My Postit</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>My Postits</h1>
+    <div id="search_container">
+      <i class="bi bi-search"></i>
+      <input type="text" name="search_input" id="search_input" placeholder="Busque um postit">
+    </div>
+    <button id="export_notes">
+      Exportar CSV <i class="bi bi-download"></i>
+    </button>
+  </header>
+  <main>
+    <div id="add_note_container">
+      <input type="text" name="note_content" id="note_content" placeholder="Escreva seu postit">
+      <button class="add_note">
+        <i class="bi bi-plus-lg"></i>
+      </button>
+    </div>
+    <div id="all_notes">
+      <div id="notes_container">
+        <div class="note color fixed">
+          <textarea readonly> "Adicione uma nota - 1" </textarea>
+          <input type="color" name="color" id="color" aria-label="Mudar cor">
+          <i class="bi bi-pin" aria-label="Fixar postit"></i>
+          <i class="bi bi-x-lg" aria-label="Excluir"></i>
+          <i class="bi bi-file-earmark-plus" aria-label="Copiar"></i>
+        </div>
+        <div class="note">
+          <textarea readonly> "Adicione uma nota - 2" </textarea>
+          <i class="bi bi-pin"></i>
+          <i class="bi bi-x-lg"></i>
+          <i class="bi bi-file-earmark-plus"></i>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+</body>
+</html>

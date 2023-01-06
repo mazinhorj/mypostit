@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  /* definir dark/light theme */
+  background-color: #333;
+  color: #f2f2f2;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#search_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#search_input {
+  background-color: #525356;
+  color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding: .8rem;
+  font-weight: bold;
+  width: 400px;
+}
+
+#search_input::placeholder {
+  color: #bdbdbd;
+}
+
+#export_notes {
+  background-color: #333;
+  color: #bdbdbd;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: .4rem .8rem;
+  border-radius: 8px;
+  border: 2px solid #f2f2f2;
+  cursor: pointer;
+  gap: .4rem;
+}
+
+.bi-download {
+  font-size: 1.4rem;
+}
+
+#export_notes:hover {
+  transition: .4s;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+#add_note_container {
+  display: flex;
+  width: 400px;
+  margin: 1rem auto 0;
+  gap: .4rem;
+}
+
+#add_note_container input,
+#add_note_container button {
+  padding: .4rem;
+  border-radius: 4px;
+}
+
+#add_note_container input {
+  flex: 1;
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+}
+
+#add_note_container button {
+  border: 1px solid #f2f2f2;
+  cursor: pointer;
+  background-color: #333;
+  color: #f3f3f3;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#all_notes {
+  display: flex;
+  margin: 0 auto;
+}
+
+#notes_container {
+  flex: 1;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.note {
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  background-color: #2e2e2e;
+  position: relative;
+}
+
+.note textarea {
+  background-color: transparent;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 4px black;
+  border: none;
+  resize: none;
+  height: 100%;
+  outline: none;
+}
+
+
+.note .bi-pin {
+  position: absolute;
+  left: .8rem;
+  bottom: .8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #525356;
+  padding: .4rem;
+  border-radius: 4px;
+}
+
+[aria-label] {
+  position: relative;
+}
+
+[aria-label]::after {
+  content: attr(aria-label);
+  display: none;
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  z-index: 5000;
+  width: max-content;
+  pointer-events: none;
+  border-radius: 4px;
+  padding: .4rem .8rem;
+  text-decoration: none;
+  font-size: .8rem;
+  color: #fff;
+  background-color:#000000a8;
+}
+
+[aria-label]:hover::after {
+  display: block;
+}
+
+.note .bi-x-lg,
+.note .bi-file-earmark-plus {
+  position: absolute;
+  right: .8rem;
+  top: .8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: .3rem;
+  opacity: 0;
+  color: #a8a8a8;
+}
+
+.note .bi-x-lg:hover,
+.note .bi-file-earmark-plus:hover {
+  color: #f2f2f2;
+}
+
+.note .bi-file-earmark-plus {
+  top: 2.8rem;
+}
+
+.note input[type="color"] {
+  position: absolute;
+  bottom: .8rem;
+  right: .8rem;
+  width: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.note:hover > i,
+.note:hover > input[type="color"] {
+  opacity: 1;
+  transition: .4s;
+}
+
+.note.fixed {
+  background-color: #474747;
+}
+
+
+
