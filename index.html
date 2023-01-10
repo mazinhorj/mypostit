@@ -7,6 +7,7 @@
   <meta name="author" content="MazinhoBigDaddy">
   <title>My Postit</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <script src="js/scripts.js" defer></script>
 </head>
 <body>
@@ -28,21 +29,11 @@
       </button>
     </div>
     <div id="all_notes">
+      <div id="sem_notas" >
+        <h2>Sem postit para exibir.</h2>
+      </div>
       <div id="notes_container">
-        <div class="note color fixed">
-          <textarea readonly> "Adicione uma nota - 1" </textarea>
-          <input type="color" name="color" id="color" aria-label="Mudar cor" class="color_btn">
-          <i class="bi bi-pin" aria-label="Fixar postit"></i>
-          <i class="bi bi-x-lg" aria-label="Excluir"></i>
-          <i class="bi bi-file-earmark-plus" aria-label="Copiar"></i>
-        </div>
-        <div class="note">
-          <textarea readonly> "Adicione uma nota - 2" </textarea>
-          <i class="bi bi-pin"></i>
-          <i class="bi bi-x-lg"></i>
-          <i class="bi bi-file-earmark-plus"></i>
-        </div>
-        
+        <!-- notas -->
       </div>
     </div>
   </main>

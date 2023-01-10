@@ -102,11 +102,24 @@ header {
 
 #all_notes {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
+}
+
+#sem_notas {
+  margin: 2rem auto;
+  display: flex;
+  flex: 1;
+}
+
+.esconde {
+  display: none !important;
 }
 
 #notes_container {
   flex: 1;
+  justify-content: space-around;
+  width: 100%;
   margin: 1rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, 350px);
@@ -208,7 +221,34 @@ header {
 }
 
 .note.fixed {
-  background-color: #474747;
+  background-color: #474747 !important;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 448px) {
+  
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  #search_container {
+    width: 100%;
+  }
+
+  #search_input {
+    width: 100%;
+  }
+
+  #add_note_container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  #notes_container {
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
 }
 
 
